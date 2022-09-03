@@ -1,8 +1,0 @@
-/home/hgr/.bashrc
-/home/hgr/.tmux.conf
-/home/hgr/pidwait.sh
-/home/hgr/pidwait
-/home/hgr/pidwaitvim
-/home/hgr/marco.sh
-/home/hgr/.vimrc
-/home/hgr/polo.sh
