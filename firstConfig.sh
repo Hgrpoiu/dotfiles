@@ -1,7 +1,8 @@
 #!/bin/bash
 
 for dir in .[^.]*; do
-	 ln -sf $dir ~/dotfiles/$dir 
+	sudo rm -r ~/$dir
+	ln -s '$PWD/$(dir)' '$PWD/../$(dir)'
   done
 
 
