@@ -10,6 +10,18 @@
 " loaded some other way (e.g. saved as `foo`, and then Vim started with
 " `vim -u foo`).
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'def-lkb/ocp-indent-vim'
+Plugin 'the-lambda-church/merlin'
+
+call vundle#end()
+filetype plugin indent on
 
 " Turn on syntax highlighting.
 syntax on

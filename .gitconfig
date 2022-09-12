@@ -1,2 +1,5 @@
 [alias]
 	graph = log --all --graph --decorate --oneline
+[user]
+	email = hgrpoiu@gmail.com
+	name = JQM
