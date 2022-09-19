@@ -27,7 +27,9 @@ call vundle#end()
 filetype plugin indent on
 
 " Turn on syntax highlighting.
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -96,6 +98,18 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 let mapleader = ","
 let g:ctrlp_map='<c-p>'
+
+
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=4    " Indents will have a width of 4
+
+set softtabstop=4   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
 
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
