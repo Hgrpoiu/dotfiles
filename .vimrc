@@ -13,6 +13,8 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/ocp-indent-vim
+set rtp^="/home/hjlap/.opam/default/share/ocp-indent/vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -98,6 +100,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 let mapleader = ","
 let g:ctrlp_map='<c-p>'
+
 
 
 set tabstop=4       " The width of a TAB is set to 4.
