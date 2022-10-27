@@ -73,7 +73,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
+alias open="xdg-open"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
