@@ -1,8 +1,10 @@
 [alias]
 	graph = log --all --graph --decorate --oneline
 [user]
-	email = hgrpoiu@gmail.com
-	name = JQM
+	email = mcind028@umn.edu
+	name = Joey
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = vim
