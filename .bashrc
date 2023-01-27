@@ -120,3 +120,4 @@ fi
 alias dc='cd'
 alias v='vim'
 alias t='tmux'
+. "$HOME/.cargo/env"
