@@ -27,6 +27,7 @@ Plugin 'trotzig/import-js'
 Plugin 'the-lambda-church/merlin'
 Plugin 'alvan/vim-closetag'
 Plugin 'stephpy/vim-yaml'
+Plugin 'prettier/vim-prettier'
 Plugin 'ambv/black'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
@@ -36,6 +37,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'maxmellon/vim-jsx-pretty'
 call vundle#end()
 filetype plugin indent on
 "airline"
@@ -215,6 +217,9 @@ let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
 let g:delimitMate_expand_cr = 1
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 
 packloadall
