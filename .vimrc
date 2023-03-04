@@ -17,7 +17,9 @@ set rtp+=~/.vim/bundle/ocp-indent-vim
 set rtp^="/home/basketglass/.opam/default/share/ocp-indent/vim"
 set clipboard=unnamedplus
 call vundle#begin()
-
+Plugin 'pangloss/vim-javascript'
+Plugin 'funorpain/vim-cpplint'
+Plugin 'honza/vim-snippets'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
@@ -36,7 +38,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'yggdroot/indentline'
 Plugin 'maxmellon/vim-jsx-pretty'
 call vundle#end()
 filetype plugin indent on
@@ -77,6 +79,7 @@ let g:airline_symbols.linenr = ''
 syntax enable
 set background=dark
 colorscheme solarized
+set ts=2 sw=2 et
 
 " Disable the default Vim startup message.
 set shortmess+=I
