@@ -19,7 +19,9 @@ set clipboard=unnamedplus
 call vundle#begin()
 Plugin 'pangloss/vim-javascript'
 Plugin 'funorpain/vim-cpplint'
+Plugin 'neoclide/coc.nvim'
 Plugin 'honza/vim-snippets'
+Plugin 'prisma/vim-prisma'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
