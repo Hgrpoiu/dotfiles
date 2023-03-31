@@ -16,33 +16,36 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/ocp-indent-vim
 set rtp^="/home/basketglass/.opam/default/share/ocp-indent/vim"
 set clipboard=unnamedplus
-call vundle#begin()
-Plugin 'pangloss/vim-javascript'
-Plugin 'funorpain/vim-cpplint'
-Plugin 'neoclide/coc.nvim'
-Plugin 'honza/vim-snippets'
-Plugin 'prisma/vim-prisma'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'def-lkb/ocp-indent-vim'
-Plugin 'raimondi/delimitmate'
-Plugin 'trotzig/import-js'
-Plugin 'the-lambda-church/merlin'
-Plugin 'alvan/vim-closetag'
-Plugin 'stephpy/vim-yaml'
-Plugin 'prettier/vim-prettier'
-Plugin 'ambv/black'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'valloric/youcompleteme'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'yggdroot/indentline'
-Plugin 'maxmellon/vim-jsx-pretty'
-call vundle#end()
+
+call plug#begin()
+Plug 'pangloss/vim-javascript'
+Plug 'overcache/NeoSolarized'
+Plug 'wakatime/vim-wakatime'
+Plug 'funorpain/vim-cpplint'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
+Plug 'prisma/vim-prisma'
+Plug 'VundleVim/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'def-lkb/ocp-indent-vim'
+Plug 'raimondi/delimitmate'
+Plug 'trotzig/import-js'
+Plug 'the-lambda-church/merlin'
+Plug 'alvan/vim-closetag'
+Plug 'stephpy/vim-yaml'
+Plug 'prettier/vim-prettier'
+Plug 'ambv/black'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline'
+Plug 'maxmellon/vim-jsx-pretty'
+call plug#end()
+
 filetype plugin indent on
 "airline"
 let g:airline_solarized_bg='dark'
@@ -80,7 +83,7 @@ let g:airline_symbols.linenr = ''
 " Turn on syntax highlighting.
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme NeoSolarized
 set ts=2 sw=2 et
 
 " Disable the default Vim startup message.
@@ -226,16 +229,8 @@ let g:delimitMate_expand_cr = 1
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-" Use tab for trigger completion with characters ahead and navigate
-" NOTE: There's always complete item selected by default, you may want to enable
-" no select by `"suggest.noselect": true` in your configuration file
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+set termguicolors
 
 packloadall
-Plugin 'wakatime/vim-wakatime'
+
+source $HOME/.config/nvim/plug-config/coc.vim
